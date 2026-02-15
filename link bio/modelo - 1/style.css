@@ -1,0 +1,105 @@
+:root {
+    --girassol: #f4b41a;
+    --fundo: #fffdf7; /* Off-white inspirado no Girassol */
+    --texto: #1a1a1b;
+    --vidro: rgba(255, 255, 255, 0.6);
+    --sombra: rgba(0, 0, 0, 0.04);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 420px;
+    padding: 60px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+.profile { text-align: center; margin-bottom: 48px; }
+
+.avatar-container {
+    position: relative;
+    width: 100px; height: 100px;
+    margin: 0 auto 20px;
+}
+
+.avatar-container img {
+    width: 100%; height: 100%;
+    border-radius: 40px; /* Quadrado arredondado moderno */
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 10px 20px var(--sombra);
+}
+
+.pulse {
+    position: absolute; bottom: 5px; right: 5px;
+    width: 14px; height: 14px;
+    background: #25d366;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+h1 { font-size: 1.8rem; font-weight: 800; letter-spacing: -1px; }
+h1 span { color: var(--girassol); }
+.profile p { font-size: 0.9rem; color: #666; margin-top: 8px; font-weight: 500; }
+
+/* Grid de Cards Interativos */
+.grid-links { width: 100%; display: flex; flex-direction: column; gap: 16px; }
+
+.card {
+    background: var(--vidro);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 12px var(--sombra);
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    background: #fff;
+    border-color: var(--girassol);
+    box-shadow: 0 20px 30px rgba(244, 180, 26, 0.15);
+}
+
+.card-content { display: flex; align-items: center; gap: 16px; }
+
+.card i { color: var(--texto); width: 22px; height: 22px; }
+
+.text { display: flex; flex-direction: column; }
+.label { font-weight: 700; font-size: 1.05rem; }
+.desc { font-size: 0.8rem; color: #888; }
+
+.arrow { opacity: 0; transition: 0.3s; color: var(--girassol) !important; }
+.card:hover .arrow { opacity: 1; transform: translate(2px, -2px); }
+
+/* Card Destaque */
+.card.highlight { background: var(--girassol); border: none; }
+.card.highlight .label, .card.highlight .desc, .card.highlight i { color: #000; }
+.card.highlight .desc { opacity: 0.7; }
+
+/* Footer */
+.footer-brand { margin-top: 100px; text-align: center; }
+
+.line { width: 40px; height: 3px; background: var(--girassol); margin: 0 auto 24px; border-radius: 10px; }
+
+.footer-brand p { font-weight: 800; color: var(--texto); margin: 40px; font-size: 1rem; }
+
+.footer-brand span { font-size: 0.75rem; opacity: 0.5; text-transform: uppercase; letter-spacing: 2px; }

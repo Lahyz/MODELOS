@@ -1,0 +1,120 @@
+:root {
+    --primaria: #f4b41a; /* Amarelo Girassol */
+    --fundo: #fffdf7;
+    --texto: #1a1a1b;
+    --texto-sec: #666;
+    --vidro: rgba(255, 255, 255, 0.7);
+    --sombra: rgba(0, 0, 0, 0.04);
+    --radius: 28px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.glow-bg {
+    position: fixed; top: 0; right: 0; width: 450px; height: 450px;
+    background: radial-gradient(circle, rgba(244, 180, 26, 0.1) 0%, transparent 70%);
+    z-index: -1;
+}
+
+.wrapper { width: 100%; max-width: 440px; padding: 60px 24px; display: flex; flex-direction: column; }
+
+/* Header */
+.profile { text-align: center; margin-bottom: 48px; }
+
+.avatar-container {
+    position: relative;
+    width: 100px; height: 100px;
+    margin: 0 auto 20px;
+}
+
+.avatar-container img {
+    width: 100%; height: 100%;
+    border-radius: 40px; /* Quadrado arredondado moderno */
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 10px 20px var(--sombra);
+}
+.online-status {
+    position: absolute; bottom: 5px; right: 5px;
+    width: 14px; height: 14px;
+    background: #25d366;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+h1 { font-size: 1.6rem; font-weight: 800; letter-spacing: -1px; }
+h1 span { color: var(--primaria); }
+.profile p { font-size: 0.9rem; color: var(--texto-sec); margin-top: 5px; }
+
+/* Estilo do Card de Vidro */
+.glass-card {
+    background: var(--vidro);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: var(--radius);
+    padding: 35px 25px;
+    box-shadow: 0 15px 35px var(--sombra);
+    margin-bottom: 20px;
+}
+
+.form-header { text-align: center; margin-bottom: 30px; }
+.badge { 
+    font-size: 0.7rem; font-weight: 800; color: var(--primaria); 
+    background: #fff9e6; padding: 5px 12px; border-radius: 100px; text-transform: uppercase;
+}
+h2 { font-size: 1.8rem; font-weight: 800; margin: 15px 0 10px; letter-spacing: -1px; }
+h2 span { color: var(--primaria); }
+.form-header p { font-size: 0.9rem; color: var(--texto-sec); line-height: 1.4; }
+
+/* Inputs e Selects */
+.input-group {
+    background: #fff; border: 1px solid #eee; padding: 15px;
+    border-radius: 18px; display: flex; align-items: center; gap: 12px;
+    margin-bottom: 12px; transition: 0.3s;
+}
+
+.input-group:focus-within { border-color: var(--primaria); box-shadow: 0 0 0 4px rgba(244, 180, 26, 0.1); }
+.input-group i { color: #ccc; width: 18px; }
+
+input, select { border: none; outline: none; width: 100%; font-size: 0.95rem; background: transparent; color: var(--texto); }
+select { cursor: pointer; appearance: none; }
+
+/* Botão CTA */
+.btn-cta {
+    width: 100%; background: var(--texto); color: #fff;
+    padding: 18px; border-radius: 18px; border: none;
+    font-weight: 800; font-size: 1rem; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-top: 10px;
+}
+.btn-cta:hover { background: var(--primaria); color: #000; transform: translateY(-3px); }
+
+/* Card de Link Pequeno */
+.small-link { 
+    padding: 20px; display: flex; align-items: center; justify-content: space-between; 
+    cursor: pointer; transition: 0.3s; margin-top: 10px;
+}
+.small-link:hover { border-color: var(--primaria); transform: scale(1.02); }
+.link-content { display: flex; align-items: center; gap: 15px; font-weight: 700; }
+.link-content i { color: var(--primaria); }
+.arrow { opacity: 0; transition: 0.3s; color: var(--primaria); }
+.small-link:hover .arrow { opacity: 1; transform: translate(2px, -2px); }
+
+/* Footer */
+.footer-brand { margin-top: 100px; text-align: center; }
+
+.line { width: 40px; height: 3px; background: var(--primaria); margin: 0 auto 24px; border-radius: 10px; }
+
+.footer-brand p { font-weight: 800; color: var(--texto); margin: 40px; font-size: 1rem; }
+
+.footer-brand span { font-size: 0.75rem; opacity: 0.5; text-transform: uppercase; letter-spacing: 2px; }

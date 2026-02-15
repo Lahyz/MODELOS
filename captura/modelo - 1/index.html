@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lah • Design & Presença Digital</title>
+    <meta name="description" content="Lah | Sites profissionais, rápidos e otimizados para o Google. Transforme sua presença digital com design limpo e foco em resultados.">
+<meta name="keywords" content="web design, landing page, SEO, criação de sites, pequeno negócio, Rio de Janeiro">
+<meta name="author" content="Lah">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lah • Soluções Digitais que Convertem">
+<meta property="og:description" content="Design moderno, sites velozes e estratégias para colocar seu negócio no topo do Google.">
+<meta property="og:image" content="https://seusite.com/imagem/foto-compartilhamento.jpg"> <meta property="og:url" content="https://seusite.com">
+
+<link rel="icon" type="image/x-icon" href="imagem/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="glow-bg"></div>
+
+    <div class="wrapper">
+        <header class="profile">
+            <div class="avatar-container">
+                <img src="imagem/lah-web-design.jpg" alt="Lah - Desenvolvedora de sites profissionais e otimizados para o Google"
+                loading="lazy" 
+     width="300" 
+     height="300">
+                <div class="online-status"></div>
+            </div>
+            <h1>Lah<span>.</span></h1>
+            <p>Sites rápidos, elegantes e feitos para vender.</p>
+        </header>
+
+        <main class="glass-card main-form">
+            <div class="form-header">
+                <span class="badge">Estratégia & Performance</span>
+                <h2>Seu negócio no <span>topo.</span></h2>
+                <p>Receba um diagnóstico gratuito para um site que converte e aparece no Google.</p>
+            </div>
+
+            <form id="diagnostico-form">
+                <div class="input-group">
+                    <i data-lucide="mail"></i>
+                    <input type="email" placeholder="Seu melhor e-mail" required>
+                </div>
+
+                <div class="input-group">
+                    <i data-lucide="briefcase"></i>
+                    <select required name="nicho">
+                        <option value="" disabled selected>Qual seu nicho?</option>
+                        <option value="clinica">Clínica / Saúde</option>
+                        <option value="educacao">Educação / Professor</option>
+                        <option value="servicos">Prestação de Serviços</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <i data-lucide="globe"></i>
+                    <select required name="dominio">
+                        <option value="" disabled selected>Já possui domínio (.com.br)?</option>
+                        <option value="sim">Sim, eu já tenho</option>
+                        <option value="nao">Não, preciso de ajuda</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <i data-lucide="trending-up"></i>
+                    <select required name="objetivo">
+                        <option value="" disabled selected>Qual seu maior foco?</option>
+                        <option value="google">Aparecer no topo do Google</option>
+                        <option value="whatsapp">Vender mais pelo WhatsApp</option>
+                        <option value="autoridade">Passar mais credibilidade</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-cta">
+                    Solicitar Diagnóstico <i data-lucide="chevron-right"></i>
+                </button>
+            </form>
+        </main>
+
+        <section class="links-list">
+            <div class="glass-card small-link" onclick="window.open('https://wa.me/5521993502526', '_blank')">
+                <div class="link-content">
+                    <i data-lucide="message-circle"></i>
+                    <span>Falar direto no WhatsApp</span>
+                </div>
+                <i data-lucide="arrow-up-right" class="arrow"></i>
+            </div>
+        </section>
+
+        <footer class="footer-brand">
+            <div class="line"></div>
+            <p><strong>Lah</strong> • Desenvolvimento Front-end</p>
+            <span>Simples • Bonito • Funcional</span>
+        </footer>
+    </div>
+
+     <script>
+        lucide.createIcons();
+           </script>
+    
+</body>
+</html>

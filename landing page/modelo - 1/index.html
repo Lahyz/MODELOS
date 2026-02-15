@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lah | Sites que Convertem</title>
+    
+    <meta name="description" content="Lah | Sites profissionais, rápidos e otimizados para o Google. Transforme sua presença digital com design limpo e foco em resultados no Rio de Janeiro.">
+    <meta name="keywords" content="web design, landing page, SEO, criação de sites, colocar site no google, Lah dev">
+    <meta name="author" content="Lah">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lah • Soluções Digitais que Convertem">
+    <meta property="og:description" content="Design moderno, sites velozes e estratégias para colocar seu negócio no topo do Google.">
+    <meta property="og:image" content="https://seusite.com/imagem/foto-compartilhamento.jpg"> 
+    <meta property="og:url" content="https://seusite.com">
+
+    <link rel="icon" type="image/x-icon" href="imagem/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <div class="bg-decoration"></div>
+
+    <main class="container">
+        <section class="hero reveal">
+            <span class="badge">Disponível para novos projetos</span>
+            <h1>Seu negócio no <span>topo do Google.</span></h1>
+            <p>Crio landing pages leves, rápidas e <strong>otimizadas para busca</strong>. O design que você quer com a visibilidade que você precisa.</p>
+            
+            <div class="cta-group">
+                <button class="btn-main" onclick="location.href='https://wa.me/5521993502526'">
+                    <i data-lucide="search"></i> Solicitar Diagnóstico Grátis
+                </button>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feat-card">
+                <i data-lucide="zap"></i>
+                <h3>Site Rápido</h3>
+                <p>Código otimizado para carregar em milissegundos e ganhar pontos com o Google.</p>
+            </div>
+            
+            <div class="feat-card highlight">
+                <i data-lucide="trending-up"></i>
+                <h3>Alavancar Busca</h3>
+                <p>Estratégias de SEO para seu site ser encontrado por quem realmente busca seu serviço.</p>
+            </div>
+
+            <div class="feat-card">
+                <i data-lucide="smartphone"></i>
+                <h3>100% Responsivo</h3>
+                <p>Visual impecável em qualquer tela, priorizando a experiência mobile.</p>
+            </div>
+
+            <div class="feat-card">
+                <i data-lucide="shield-check"></i>
+                <h3>Credibilidade</h3>
+                <p>Design limpo que transmite confiança e profissionalismo ao seu cliente.</p>
+            </div>
+        </section>
+
+        <footer class="footer-brand">
+            <div class="line"></div>
+            <p><strong>Lah</strong> • Desenvolvimento Front-end</p>
+            <span>Simples • Bonito • Funcional</span>
+        </footer>
+    </main>
+
+    <script>
+        lucide.createIcons();
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveal = document.querySelector('.reveal');
+            reveal.style.opacity = '1';
+            reveal.style.transform = 'translateY(0)';
+        });
+    </script>
+</body>
+</html>
